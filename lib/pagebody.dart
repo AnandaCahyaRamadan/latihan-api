@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'goalstat.dart';
 import 'matchtile.dart';
-import 'matchstat.dart';
+import 'teamstat.dart';
 import 'soccermodel.dart';
 
 Widget PageBody(List<SoccerMatch> allmatches) {
@@ -16,12 +16,9 @@ Widget PageBody(List<SoccerMatch> allmatches) {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                teamStat("Local Team", allmatches[0].home.logoUrl,
-                    allmatches[0].home.name),
-                goalStat(allmatches[0].fixture.status.elapsedTime,
-                    allmatches[0].goal.home, allmatches[0].goal.away),
-                teamStat("Visitor Team", allmatches[0].away.logoUrl,
-                    allmatches[0].away.name),
+                teamStat("Local Team", allmatches[0].home.logoUrl, allmatches[0].home.name),
+                goalStat(allmatches[0].fixture.status.elapsedTime, allmatches[0].goal.home, allmatches[0].goal.away),
+                teamStat("Visitor Team", allmatches[0].away.logoUrl, allmatches[0].away.name),
               ],
             ),
           ),
